@@ -7,8 +7,8 @@ function addone(num){
 }
 
 // EXPRESSION💜💜💜💜
-console.log(addTwo(5));    // this is showing error
+// console.log(addTwo(5));    // this is showing error
 
 const addTwo = function(num){
-  return num+2
+  return (num+2)
 }
