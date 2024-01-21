@@ -16,3 +16,10 @@ console.log(instructor);          // hitesh sir
 
 
 // API
+
+// {
+//   "name": "sneha",
+//   "gender": "female"
+// }
+
+// JSON FORMATTER 

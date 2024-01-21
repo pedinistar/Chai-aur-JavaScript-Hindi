@@ -42,3 +42,6 @@ const repoCount = 25
 // console.log(`Helo my name is ${name.toUpperCase()} and my repo count is ${repoCount}`);
 // Helo my name is SNEHA and my repo count is 25
 
+// 💜💜💜💜💜💜
+// STRING INTREPOLATION
+// ``
