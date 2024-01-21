@@ -58,3 +58,49 @@ function loginUserMessage(username='sam'){
 
 console.log(loginUserMessage("sneha"));
 console.log(loginUserMessage()); // sam just logged in
+
+
+
+
+
+// when you dont kw how many params user would give
+// 💜💜💜💜💜💜💜💜rest operator
+
+// function calcCartPrice(num1){
+//   return num1
+// }
+
+// console.log(calcCartPrice(200,400,600));   // 2
+
+// function calcCartPrice(...num1){
+//   return num1
+// }
+// console.log(calcCartPrice(200,400,600));   // [200,400,600]
+
+
+
+function calcCartPrice(val1,val2,...num1){
+  return num1
+}
+console.log(calcCartPrice(200,400,600,30,20));   // [ 600, 30, 20 ] = num1
+                                                // val1 = 200 , val2 = 400
+
+
+const user = {
+  username: "sneha",
+  price: 400
+}
+
+function handleObject(anyObject){
+  console.log(`username is ${anyObject.username} and name is ${anyObject.price}`);
+}
+
+handleObject(user)
+
+
+
+const myArray = [300,70,46,88]
+function returnSecondValue(anyarray){
+  return anyarray[1]
+}
+console.log(returnSecondValue(myArray))
