@@ -4,33 +4,33 @@ const attackOfTitans = ["levi","armin","erwin",]
 const jujutsuKaisen = ["fushiguro","nobara","sukuna"]
 
 // attackOfTitans.push(jujutsuKaisen)
-// console.log(attackOfTitans);   // [ 'levi', 'armin', 'erwin', [ 'fushiguro', 'nobara', 'sukuna' ] ]
-// array k andr array aagya , ye problem hai
+console.log(attackOfTitans);   // [ 'levi', 'armin', 'erwin', [ 'fushiguro', 'nobara', 'sukuna' ] ]
+// array k andr array aagya , ye problem hai😵
 
 // attackOfTitans.concat(jujutsuKaisen)
-// console.log(attackOfTitans);  // [ 'levi', 'armin', 'erwin', [ 'fushiguro', 'nobara', 'sukuna' ] ]
-// again its problematic
+console.log(attackOfTitans);  // [ 'levi', 'armin', 'erwin', [ 'fushiguro', 'nobara', 'sukuna' ] ]
+// again its problematic😵
 
-// const allAnime = attackOfTitans.concat(jujutsuKaisen)
-// console.log(allAnime);
+
+
 
 // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 // SPREAD OPERATOR
 const allAnime1 = [...attackOfTitans,...jujutsuKaisen]
 console.log(allAnime1)
+// [ 'levi', 'armin', 'erwin', 'fushiguro', 'nobara', 'sukuna' ]
 // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 
+
+
+
 const anotherArray = [1,2,3, [4,5,6],7,[6,7,[4,5]]]
-
 const anotherArray2 = anotherArray.flat();
-console.log(anotherArray2);
-
-console.log(Array.isArray("sneha"));
-
-console.log(Array.from("sneha"));
+console.log(anotherArray2);   // [ 1, 2, 3, 4, 5, 6, 7, 6, 7, [ 4, 5 ] ]
 
 
-
+console.log(Array.isArray("sneha"));   // false 🌸
+console.log(Array.from("sneha")); // [ 's', 'n', 'e', 'h', 'a' ] 🌸
 console.log(Array.from({name: "sneha"}));  // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ Interesting Situation
 // this will return an empty array [], this happens jab use smaj nhi aata ki kese convert karein array mein
 
