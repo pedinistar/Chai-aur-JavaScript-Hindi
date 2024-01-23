@@ -49,6 +49,21 @@ JsUser.greetingTwo = function(){
   console.log(`Good Death! ${this.name}`);
 }
 
-// console.log(JsUser.greeting());
-// console.log(JsUser.greetingTwo());
-// console.log(JsUser);
+JsUser.greeting();
+// Good Death!
+JsUser.greetingTwo();
+// Good Death! sneha
+
+console.log(JsUser);
+/*
+{
+  undefined: 'mykey1',
+  name: 'sneha',
+  fullName: 'sneha pedini',
+  age: 20,
+  email: '--------@gpt.com',
+  isLoggedIn: false,
+  greeting: [Function (anonymous)],
+  greetingTwo: [Function (anonymous)]
+} 
+*/
