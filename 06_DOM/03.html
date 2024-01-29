@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chain aur Code</title>
+</head>
+<body style="background-color: black; color: aliceblue">
+
+</body>
+<script>
+  const div = document.createElement('div')
+  console.log(div)
+  //<div></div>
+  div.className = "main"
+  div.id = Math.floor(Math.random()*10+1)
+  console.log(div)
+  //<div class="main" id="2"></div>
+  div.setAttribute("title","generatedTitle")
+  console.log(div)
+  //<div class="main" id="6" title="generatedTitl"></div>
+  div.style.backgroundColor = "green"
+  div.style.padding = "12px"
+  div.innerHTML = "hulla hulla bum bum"
+  const addText = document.createTextNode("hulla hulaa")
+  div.appendChild(addText)
+
+  
+  document.body.appendChild(div)
+</script>
+</html>

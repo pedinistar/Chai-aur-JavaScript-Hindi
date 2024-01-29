@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit remove elements in DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue">
+  <ul class="language">
+    <li>js</li>
+  </ul>
+</body>
+<script>
+  /*function addLanguage(langName){
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`;
+    
+    document.querySelector(".language").appendChild(li);
+  }
+
+  addLanguage("python")
+  addLanguage("java")
+  addLanguage("css")
+  addLanguage("html")
+  */
+
+  function addLanguageInOptimizedWay(langName){
+    const li = document.createElement("li")
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector(".language").appendChild(li)
+  }
+
+  // pure ke pure tree ko traverse nhi karna padra ismein isliye ye optimized way hai
+  addLanguageInOptimizedWay("python")
+  addLanguageInOptimizedWay("java")
+
+
+  // edit
+  const secLang = document.querySelector("li:nth-child(2)")
+  // secLang.innerHTML = "mojo"
+  const newLi = document.createElement('li')
+  newLi.textContent = "Mojo"
+  secLang.replaceWith(newLi)
+
+  // edit
+  const firstLang = document.querySelector("li:first-child")
+  firstLang.outerHTML = `<li>Typescript</li>`
+
+
+  // delete
+  // remove
+  const lastLang = document.querySelector("li:last-child")
+  lastLang.remove()
+
+</script>
+</html>

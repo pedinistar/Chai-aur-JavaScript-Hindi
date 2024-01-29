@@ -1,0 +1,143 @@
+⭐ DOM - Document Object Model
+⭐ Window is an Object
+⭐ document.getElementByID("").innerText = "<h1>hi</h1>";
+
+document.getElementById("title")
+🌿<h1 id="title" class="heading">DOM LEARNING on Chai aur Code</h1>
+    
+document.getElementById("title").id
+🌿'title'
+
+document.getElementById("title").class
+🌿undefined
+
+document.getElementById("title").className
+🌿'heading'
+
+document.getElementById("title").getAttribute
+🌿ƒ getAttribute() { [native code] }
+
+document.getElementById("title").getAttribute('id')
+🌿'title'
+
+document.getElementById("title").getAttribute('class')
+🌿'heading'
+
+document.getElementById("title").setAttribute('class',"text")
+🌿undefined
+
+document.getElementById("title").getAttribute('class')
+🌿'text'    // as you can see it overwrites
+
+so this is the right way
+document.getElementById("title").setAttribute('class',"text heading")
+🌿'text heading'
+
+
+const title = document.getElementById("title")
+
+title.style.backgroundColor = "pink"
+🌿'pink'
+title.style.padding = "15px"
+🌿'15px'
+title.style.borderRadius = "34px"
+🌿'34px'
+
+
+
+
+
+title
+🌿<h1 id=​"title" class=​"text heading" style=​"background-color:​ pink;​ padding:​ 15px;​ border-radius:​ 34px;​">​DOM LEARNING on Chai aur Code​</h1>​
+
+title.textContent
+🌿'DOM LEARNING on Chai aur Code'
+title.innerHTML
+🌿'DOM LEARNING on Chai aur Code'
+title.innerText
+🌿'DOM LEARNING on Chai aur Code'
+
+
+before applyting styling to the span tag of display none
+title.innerText
+🌿'DOM LEARNING on Chai aur Code test text'
+title.textContent
+🌿'DOM LEARNING on Chai aur Code test text'
+
+after applying styling
+title.innerText
+🌿'DOM LEARNING on Chai aur Code'
+title.textContent
+🌿'DOM LEARNING on Chai aur Code test text'
+
+// innerText sirf wo text show karega jo actually mein visible hai
+// aur textContent ko andr sara content milta hai
+// indo me se konsa use karna hai wo usecase pr depend karega
+// innerHTML mein pura html miljata hai
+
+
+
+⭐document.querySelector("h1")
+🌿<h1 id="title" class="heading">DOM LEARNING on Chai aur Code <span style="display: none;">test text</span></h1>
+
+⭐document.querySelectorAll("h1")
+🌿NodeList(2) [h1#title.heading, h1]
+0: h1#title.heading
+1: h1
+length: 2
+[[Prototype]]: NodeList
+
+
+
+document.querySelector("input[type='password']")
+🌿<input type=​"password" name id fdprocessedid=​"ptdty4">​
+
+
+
+
+const myUl = document.querySelector("ul")
+🌿undefined
+
+myUl
+🌿<ul>​…​</ul>​
+
+myUl.querySelector("li")
+🌿<li>​…​</li>​    // first elemnt selected
+
+const turnGreen = myUl.querySelector("li")
+🌿undefined
+
+turnGreen.style.backgroundColor = "green";
+🌿'green'
+
+
+querySelectorAll deta hai ek NodeList
+
+
+
+NodeList pr forEach laga skte hain aur map nhi laga skte
+HTML Collection pr forEach bhi nahi laga skte means isko 
+convert karna padega
+
+
+const tempClassList = document.getElementsByClassName('list-item')
+
+tempClassList
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const myConvertedArray = Array.from(tempClassList)
+
+myConvertedArray
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+we can use Array.from() to convert the HTMLCollection into an array🌸
+
+
+
+
+⭐important discussion about nodelist. a node list is a 
+collection of document nodes which includes text nodes,
+attribute nodes and element nodes. a line break is also 
+counted in nodelist but only first one. all subsequent 
+line breaks are ignored by browser
+
