@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+  <h2>Amazing Images</h2>
+  <ul id="images">
+    <li><img src="assets/one.jpg" id="jimin" height="300px" width="200px" style="object-fit: cover;"  alt=""></li>
+    <li><img src="assets/two.jpg" id="jk"  height="300px" width="200px" style="object-fit: cover;" alt=""></li>
+    <li><img src="assets/three.jpg" id="suga"  height="300px" width="200px" style="object-fit: cover;" alt=""></li>
+    <li><img src="assets/four.jpg" id="jhope" height="300px" width="200px" style="object-fit: cover;"  alt=""></li>
+    <li><img src="assets/five.jpg" id="joonie" height="300px" width="200px" style="object-fit: cover;"  alt=""></li>
+    <li><img src="assets/six.jpg" id="tae"  height="300px" width="200px" style="object-fit: cover;" alt=""></li>
+    <li><img src="assets/seven.jpg" id="jin" height="300px" width="200px" style="object-fit: cover;" alt=""></li>
+    <li><a id="google" style="color:aliceblue" href="www.google.com">Google</a></li>
+  </ul>
+
+  <script>
+    /*
+    /*document.getElementById("jimin").onclick = function(){
+      alert("jimin selected")
+    } */
+    // onclick hamein feautures kam deta hai to isko use karne ke bajaye niche wala karein
+    /*
+
+    //  document.getElementById("jimin").addEventListener("click", function(){}, false)
+    // third atrribute bhi dena hota hai but wo default mein false hi hoti hai isliye ham nahi likhte
+    // ⭐⭐⭐⭐ true aur false third parameter hai addevent listener ka
+
+   // ⭐⭐⭐⭐ recommended way to add event
+   document.getElementById("jimin").addEventListener("click", function(){
+    alert("jimin was clicked")
+   })
+
+   // yahn pr function ke andr hamein event object bhi milta hai(elemObj)
+   document.getElementById("jk").addEventListener("click", function(elemObj){
+    alert(elemObj)
+   }, false)
+   
+   // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+   /* THINGS TO STUDY
+   -Event Types
+   -Timestamp
+   -Default Prevented
+   -Target
+   -toElement
+   -srcElement
+   -currentTarget
+   -clientX, clientY
+   -offset
+   -screenX, screenY
+   -altkey, ctrlkey, shiftkey, keycode
+   */
+   // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+
+
+   // EVENT PROPAGATION
+   // ye false / true kya hai third parameter mein
+   // event propogation ka do context hota hai, ek hota hai 'event bubbling' and dusra 'event capturing'
+   // false - event bubbling
+   // true - event capturing
+
+   /*document.getElementById("images").addEventListener("click", function(e){
+    console.log("clicked inside the ul")
+   }, false)
+
+   document.getElementById("suga").addEventListener("click", function(e){
+    console.log("suga clicked")
+   }, false)*/
+
+   //suga clicked
+   //clicked inside the ul
+   
+   // dono code activate ho jayega jab mein suga ko click karungi... aur sbse pehle suga wala event chalega then images wala chalega
+   // this is event propagation, event bubbling ... bubble kya hota hai niche se upper jata hai, to sabse pehle inner element pr click kiya 
+   // jo images tha, uske bad li uske bad ul.
+   
+   /*
+   document.getElementById("images").addEventListener("click", function(e){
+    console.log("clicked inside the ul")
+   }, true)
+
+   document.getElementById("suga").addEventListener("click", function(e){
+    console.log("suga clicked")
+   }, true)
+   */
+
+   //clicked inside the ul
+   //suga clicked
+
+   // ismein event capturing mein bubbling ka ulta hoga means bahr se andr ki traf ayega
+
+   
+   /*
+  document.getElementById("images").addEventListener("click", function(e){
+    console.log("clicked inside the ul")
+   }, false)
+
+   document.getElementById("suga").addEventListener("click", function(e){
+    console.log("suga clicked")
+    // ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
+    e.stopPropagation()
+    // iska matlab ab apka event bubble hokr up wale event pr nahi jayega
+  }, false)
+  
+  document.getElementById("google").addEventListener("click", function(e){
+    console.log("google clicked")
+    e.preventDefault()
+  }, false)
+
+  // google clicked
+
+  */
+
+
+  // images pr click karun aur images gayab hojaye
+  document.querySelector("#images").addEventListener("click", function(event){
+    //console.log(event, event.target, event.target.parentNode)
+    if (event.target.tagName === 'IMG') {
+      let removeIt = event.target.parentNode
+      removeIt.remove();
+    }
+
+  }, false)
+
+  // ⭐⭐ event, event.target
+   
+  </script>
+</body>
+</html>
