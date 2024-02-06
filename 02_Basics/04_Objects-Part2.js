@@ -1,16 +1,17 @@
+// two ways of making an empty objet
 const tinderUser = new Object()  
 const tinderUserTwo = {} 
 
-// two ways of making an empty objet
 console.log(tinderUser);// empty object
 console.log(tinderUserTwo);// empty object
 
+
+// to add keys in the object
 tinderUser.id = "123abh"
 tinderUser.name = "sam"
 tinderUser.isLoggedIn = false
 
 console.log(tinderUser);   // { id: '123abh', name: 'sam', isLoggedIn: false }
-
 
 
 const regularUser = {
@@ -27,10 +28,8 @@ console.log(regularUser.fullName);   //{ userfullname: { firstname: 'sneha', las
 console.log(regularUser.fullName.userfullname);  //{ firstname: 'sneha', lastname: 'pedini' }
 console.log(regularUser.fullName.userfullname.firstname);  //sneha
 
-// if some key is not there then it will return an error to avoid it we could use ?
+// ⭐ if some key is not there then it will return an error to avoid it we could use ?
 console.log(regularUser?.fullName?.userfullname?.firstname);  //sneha
-
-
 
 
 const obj1 = {1: "a", 2: "b"}

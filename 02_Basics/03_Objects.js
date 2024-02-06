@@ -10,6 +10,7 @@
 const mySym = Symbol["key1"]
 
 const JsUser = {
+  // HOW TO ADD SYMBOL AS A KEY IN OBJECT⭐
   [mySym]: "mykey1",
   name: "sneha",
   "fullName": "sneha pedini",
@@ -19,13 +20,15 @@ const JsUser = {
 }
 
 
-// console.log(JsUser.email);
-// console.log(JsUser["email"]);
+console.log(JsUser.email);
+console.log(JsUser["email"]);
 
 // console.log(JsUser."fullName");❌
-// console.log(JsUser["fullName"]);
+console.log(JsUser["fullName"]);
 
-// console.log(JsUser[mySym]);
+
+// HOW TO ADD SYMBOL AS A KEY IN OBJECT⭐
+console.log(JsUser[mySym]);  // symbol
 
 
 JsUser.email = "niknak@gpt.com"
@@ -33,8 +36,9 @@ JsUser.email = "niknak@gpt.com"
 
 
 // ⭐⭐⭐⭐⭐⭐⭐⭐⭐
-// this will not change the obj and will freeze it
-// Object.freeze(JsUser)
+// THIS WILL NOT CHANGE THE OBJECT AND WILL FREEZE IT
+Object.freeze(JsUser)
+// ⭐⭐⭐⭐⭐⭐⭐⭐⭐
 
 
 JsUser.email = "--------@gpt.com"
